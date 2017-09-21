@@ -17,18 +17,30 @@
     return self;
 }
 
++ (instancetype)promise {
+    return [[self alloc] initWithHandler:nil];
+}
+
 + (instancetype)promiseWithHandler:(GSPromiseHandler)handler {
     id instance = [[GSPromise alloc] initWithHandler:handler];
     
     return instance;
 }
 
+- (void)dealloc {
+#ifdef DEBUG
+    NSLog(@"%@ dealloc", self);
+#endif
+}
+
 @end
 
+static NSInteger const GSPromiseIndexUnkown = -1;
 @interface GSPromiseManager ()
 {
     /// list of operating promises
-    NSMutableArray <id <GSPromisable>> *container;
+    NSMutableArray<id<GSPromisable>> *container;
+    NSInteger currentIndex;
 }
 
 /// whether manager is working, atomic
@@ -45,46 +57,56 @@
         [container addObject:promise];
     }
     
-    [self try2Start];
+    [self handleNextPromiseAfterIndex:currentIndex];
 }
 
 /// try to handle next operation
-- (void)try2Start {
+- (void)handleNextPromiseAfterIndex:(NSInteger)index {
     if (self.isWorking) return;
     
-    id <GSPromisable> first = container.firstObject;
-    if (!first) return;
+    NSUInteger count = container.count;
+    if (!count) return;
+    
+    NSInteger nextIndex = GSPromiseIndexUnkown;
+    id<GSPromisable> nextPromise = nil;
+    if (index == GSPromiseIndexUnkown) {
+        nextPromise = container.firstObject;
+        nextIndex = 0;
+        
+    } else {
+        nextIndex = index + 1;
+        if (nextIndex < count) nextPromise = container[nextIndex];
+    }
+    
+    if (!nextPromise) return;
     
     self.working = YES;
-    dispatch_block_t then = ^{
-        self.working = NO;
-        
-        @synchronized (self) {
-            if (!container.firstObject) return;
-            [container removeObjectAtIndex:0];
-        }
-        
-        [self try2Start];
-    };
+    currentIndex = nextIndex;
     
-    first.handler(then);
+    // 此处使用 self 可以造成必要的循环引用
+    nextPromise.handler(^{
+        self.working = NO;
+        [self handleNextPromiseAfterIndex:nextIndex];
+    });
 }
 
 #pragma mark - initialiers
 /// convinience initilizer
-- (instancetype)initWithPromises:(NSArray <id <GSPromisable>> *)promises {
+- (instancetype)initWithPromises:(NSArray<id<GSPromisable>> *)promises {
     self = [super init];
     if (self) {
         container = [[NSMutableArray alloc] initWithCapacity:3];
         [container addObjectsFromArray:promises ?: @[]];
         
-        [self try2Start];
+        currentIndex = GSPromiseIndexUnkown;
+        
+        [self handleNextPromiseAfterIndex:currentIndex];
     }
     
     return self;
 }
 
-- (instancetype)initWithPromise:(id <GSPromisable>)promise {
+- (instancetype)initWithPromise:(id<GSPromisable>)promise {
     return [self initWithPromises:promise ? @[promise] : @[]];
 }
 
@@ -92,12 +114,22 @@
     return [self initWithPromises:@[]];
 }
 
-+ (instancetype)manangerWithPromise:(id <GSPromisable>)promise {
++ (instancetype)manager {
+    return [[self alloc] init];
+}
+
++ (instancetype)manangerWithPromise:(id<GSPromisable>)promise {
     return [[self alloc] initWithPromise:promise];
 }
 
-+ (instancetype)manangerWithPromises:(NSArray <id <GSPromisable>> *)promises {
++ (instancetype)manangerWithPromises:(NSArray<id<GSPromisable>> *)promises {
     return [[self alloc] initWithPromises:promises];
+}
+
+- (void)dealloc {
+#ifdef DEBUG
+    NSLog(@"manager dealloc");
+#endif
 }
 
 @end
