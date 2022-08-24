@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0820"
+   LastUpgradeVersion = "1340"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BC3E505B1F5CDDC1002E40D6"
-               BuildableName = "TestGSPromise.app"
-               BlueprintName = "TestGSPromise"
-               ReferencedContainer = "container:TestGSPromise.xcodeproj">
+               BuildableName = "GSPromiseDev.app"
+               BlueprintName = "GSPromiseDev"
+               ReferencedContainer = "container:GSPromiseDev.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,17 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BC3E505B1F5CDDC1002E40D6"
-            BuildableName = "TestGSPromise.app"
-            BlueprintName = "TestGSPromise"
-            ReferencedContainer = "container:TestGSPromise.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -56,13 +45,11 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BC3E505B1F5CDDC1002E40D6"
-            BuildableName = "TestGSPromise.app"
-            BlueprintName = "TestGSPromise"
-            ReferencedContainer = "container:TestGSPromise.xcodeproj">
+            BuildableName = "GSPromiseDev.app"
+            BlueprintName = "GSPromiseDev"
+            ReferencedContainer = "container:GSPromiseDev.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -75,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BC3E505B1F5CDDC1002E40D6"
-            BuildableName = "TestGSPromise.app"
-            BlueprintName = "TestGSPromise"
-            ReferencedContainer = "container:TestGSPromise.xcodeproj">
+            BuildableName = "GSPromiseDev.app"
+            BlueprintName = "GSPromiseDev"
+            ReferencedContainer = "container:GSPromiseDev.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

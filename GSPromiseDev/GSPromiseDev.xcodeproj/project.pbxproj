@@ -21,7 +21,7 @@
 		9475A77028B69C6E003F90CF /* GSPromising.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPromising.m; sourceTree = "<group>"; };
 		9475A77128B69C6E003F90CF /* GSPromising.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPromising.h; sourceTree = "<group>"; };
 		9475A77428B69DD1003F90CF /* GSPromise.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSPromise.h; sourceTree = "<group>"; };
-		BC3E505C1F5CDDC1002E40D6 /* TestGSPromise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestGSPromise.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC3E505C1F5CDDC1002E40D6 /* GSPromiseDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GSPromiseDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC3E50601F5CDDC1002E40D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BC3E50621F5CDDC1002E40D6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BC3E50631F5CDDC1002E40D6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				9475A76E28B69C6E003F90CF /* GSPromise */,
-				BC3E505E1F5CDDC1002E40D6 /* TestGSPromise */,
+				BC3E505E1F5CDDC1002E40D6 /* GSPromiseDev */,
 				BC3E505D1F5CDDC1002E40D6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,12 +77,12 @@
 		BC3E505D1F5CDDC1002E40D6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BC3E505C1F5CDDC1002E40D6 /* TestGSPromise.app */,
+				BC3E505C1F5CDDC1002E40D6 /* GSPromiseDev.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BC3E505E1F5CDDC1002E40D6 /* TestGSPromise */ = {
+		BC3E505E1F5CDDC1002E40D6 /* GSPromiseDev */ = {
 			isa = PBXGroup;
 			children = (
 				BC3E50791F5CDDE8002E40D6 /* TestManager.h */,
@@ -97,7 +97,7 @@
 				BC3E50701F5CDDC3002E40D6 /* Info.plist */,
 				BC3E505F1F5CDDC1002E40D6 /* Supporting Files */,
 			);
-			path = TestGSPromise;
+			path = GSPromiseDev;
 			sourceTree = "<group>";
 		};
 		BC3E505F1F5CDDC1002E40D6 /* Supporting Files */ = {
@@ -111,9 +111,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BC3E505B1F5CDDC1002E40D6 /* TestGSPromise */ = {
+		BC3E505B1F5CDDC1002E40D6 /* GSPromiseDev */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BC3E50731F5CDDC3002E40D6 /* Build configuration list for PBXNativeTarget "TestGSPromise" */;
+			buildConfigurationList = BC3E50731F5CDDC3002E40D6 /* Build configuration list for PBXNativeTarget "GSPromiseDev" */;
 			buildPhases = (
 				BC3E50581F5CDDC1002E40D6 /* Sources */,
 				BC3E50591F5CDDC1002E40D6 /* Frameworks */,
@@ -123,9 +123,9 @@
 			);
 			dependencies = (
 			);
-			name = TestGSPromise;
+			name = GSPromiseDev;
 			productName = TestGSPromise;
-			productReference = BC3E505C1F5CDDC1002E40D6 /* TestGSPromise.app */;
+			productReference = BC3E505C1F5CDDC1002E40D6 /* GSPromiseDev.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -144,7 +144,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BC3E50571F5CDDC1002E40D6 /* Build configuration list for PBXProject "TestGSPromise" */;
+			buildConfigurationList = BC3E50571F5CDDC1002E40D6 /* Build configuration list for PBXProject "GSPromiseDev" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -157,7 +157,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BC3E505B1F5CDDC1002E40D6 /* TestGSPromise */,
+				BC3E505B1F5CDDC1002E40D6 /* GSPromiseDev */,
 			);
 		};
 /* End PBXProject section */
@@ -322,7 +322,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = TestGSPromise/Info.plist;
+				INFOPLIST_FILE = GSPromiseDev/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.printer.TestGSPromise;
@@ -334,7 +334,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = TestGSPromise/Info.plist;
+				INFOPLIST_FILE = GSPromiseDev/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.printer.TestGSPromise;
@@ -345,7 +345,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BC3E50571F5CDDC1002E40D6 /* Build configuration list for PBXProject "TestGSPromise" */ = {
+		BC3E50571F5CDDC1002E40D6 /* Build configuration list for PBXProject "GSPromiseDev" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC3E50711F5CDDC3002E40D6 /* Debug */,
@@ -354,7 +354,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BC3E50731F5CDDC3002E40D6 /* Build configuration list for PBXNativeTarget "TestGSPromise" */ = {
+		BC3E50731F5CDDC3002E40D6 /* Build configuration list for PBXNativeTarget "GSPromiseDev" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC3E50741F5CDDC3002E40D6 /* Debug */,
