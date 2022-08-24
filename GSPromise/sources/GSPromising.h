@@ -1,12 +1,14 @@
 //
-//  GSPromise.h
+//  GSPromising.h
 //  TestPromiseKit
 //
-//  Created by Brook on 2017/8/30.
-//  Copyright © 2017年 Brook. All rights reserved.
+//  Created by beforeold on 2017/8/30.
+//  Copyright © 2017年 beforeold. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  what a promise will execute
@@ -24,9 +26,9 @@ typedef void(^GSPromiseHandler)(dispatch_block_t ok);
 @end
 
 /**
- GSPromise ecapsulate a promise which confirms to GSPromisable protocol
+ GSPromising ecapsulate a promise which confirms to GSPromisable protocol
  */
-@interface GSPromise : NSObject <GSPromisable>
+@interface GSPromising : NSObject <GSPromisable>
 
 /// GSPromisable
 @property (nonatomic, copy) GSPromiseHandler handler;
@@ -62,3 +64,5 @@ typedef void(^GSPromiseHandler)(dispatch_block_t ok);
 
 @end
 
+
+NS_ASSUME_NONNULL_END

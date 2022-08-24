@@ -1,13 +1,15 @@
 //
-//  GSPromise.m
+//  GSPromising.m
 //  TestPromiseKit
 //
-//  Created by Brook on 2017/8/30.
-//  Copyright © 2017年 Brook. All rights reserved.
+//  Created by beforeold on 2017/8/30.
+//  Copyright © 2017年 beforeold. All rights reserved.
 //
 
-#import "GSPromise.h"
-@implementation GSPromise
+#import "GSPromising.h"
+
+@implementation GSPromising
+
 - (instancetype)initWithHandler:(GSPromiseHandler)handler {
     self = [super init];
     if (self) {
@@ -18,11 +20,13 @@
 }
 
 + (instancetype)promise {
-    return [[self alloc] initWithHandler:nil];
+    return [[self alloc] initWithHandler:^(dispatch_block_t  _Nonnull ok) {
+        ok();
+    }];
 }
 
 + (instancetype)promiseWithHandler:(GSPromiseHandler)handler {
-    id instance = [[GSPromise alloc] initWithHandler:handler];
+    id instance = [[GSPromising alloc] initWithHandler:handler];
     
     return instance;
 }

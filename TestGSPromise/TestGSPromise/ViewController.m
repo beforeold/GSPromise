@@ -2,13 +2,14 @@
 //  ViewController.m
 //  TestPromiseKit
 //
-//  Created by Brook on 2017/8/30.
-//  Copyright © 2017年 Brook. All rights reserved.
+//  Created by beforeold on 2017/8/30.
+//  Copyright © 2017年 beforeold. All rights reserved.
 //
 
 #import "ViewController.h"
 
-#import "GSPromise.h"
+#import "GSPromising.h"
+
 #import "TestManager.h"
 
 @interface ViewController ()
@@ -23,19 +24,19 @@
 }
 
 - (void)testPromise {
-    GSPromise *a = [GSPromise promiseWithHandler:^(dispatch_block_t then){
+    GSPromising *a = [GSPromising promiseWithHandler:^(dispatch_block_t then){
         [TestManager doSomethingWithCompletion:^{
             NSLog(@"done a"); then();
         }];
     }];
     
-    GSPromise *b = [GSPromise promiseWithHandler:^(dispatch_block_t then){
+    GSPromising *b = [GSPromising promiseWithHandler:^(dispatch_block_t then){
         [TestManager doSomethingWithCompletion:^{
             NSLog(@"done b"); then();
         }];
     }];
     
-    GSPromise *c = [GSPromise promiseWithHandler:^(dispatch_block_t then){
+    GSPromising *c = [GSPromising promiseWithHandler:^(dispatch_block_t then){
         [TestManager doSomethingWithCompletion:^{
             NSLog(@"done c"); then();
         }];

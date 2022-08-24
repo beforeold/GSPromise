@@ -7,17 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9475A77228B69C6E003F90CF /* GSPromising.m in Sources */ = {isa = PBXBuildFile; fileRef = 9475A77028B69C6E003F90CF /* GSPromising.m */; };
 		BC3E50611F5CDDC1002E40D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3E50601F5CDDC1002E40D6 /* main.m */; };
 		BC3E50641F5CDDC1002E40D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3E50631F5CDDC1002E40D6 /* AppDelegate.m */; };
 		BC3E506A1F5CDDC2002E40D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC3E50681F5CDDC2002E40D6 /* Main.storyboard */; };
 		BC3E506C1F5CDDC2002E40D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC3E506B1F5CDDC2002E40D6 /* Assets.xcassets */; };
 		BC3E506F1F5CDDC3002E40D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC3E506D1F5CDDC3002E40D6 /* LaunchScreen.storyboard */; };
-		BC3E50781F5CDDD5002E40D6 /* GSPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3E50771F5CDDD5002E40D6 /* GSPromise.m */; };
 		BC3E507D1F5CDDE8002E40D6 /* TestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3E507A1F5CDDE8002E40D6 /* TestManager.m */; };
 		BC3E507E1F5CDDE8002E40D6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3E507C1F5CDDE8002E40D6 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9475A77028B69C6E003F90CF /* GSPromising.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPromising.m; sourceTree = "<group>"; };
+		9475A77128B69C6E003F90CF /* GSPromising.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPromising.h; sourceTree = "<group>"; };
+		9475A77428B69DD1003F90CF /* GSPromise.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSPromise.h; sourceTree = "<group>"; };
 		BC3E505C1F5CDDC1002E40D6 /* TestGSPromise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestGSPromise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC3E50601F5CDDC1002E40D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BC3E50621F5CDDC1002E40D6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,8 +29,6 @@
 		BC3E506B1F5CDDC2002E40D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC3E506E1F5CDDC3002E40D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC3E50701F5CDDC3002E40D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC3E50761F5CDDD5002E40D6 /* GSPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPromise.h; sourceTree = "<group>"; };
-		BC3E50771F5CDDD5002E40D6 /* GSPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPromise.m; sourceTree = "<group>"; };
 		BC3E50791F5CDDE8002E40D6 /* TestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestManager.h; sourceTree = "<group>"; };
 		BC3E507A1F5CDDE8002E40D6 /* TestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestManager.m; sourceTree = "<group>"; };
 		BC3E507B1F5CDDE8002E40D6 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -45,9 +46,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9475A76E28B69C6E003F90CF /* GSPromise */ = {
+			isa = PBXGroup;
+			children = (
+				9475A77428B69DD1003F90CF /* GSPromise.h */,
+				9475A76F28B69C6E003F90CF /* sources */,
+			);
+			name = GSPromise;
+			path = ../GSPromise;
+			sourceTree = "<group>";
+		};
+		9475A76F28B69C6E003F90CF /* sources */ = {
+			isa = PBXGroup;
+			children = (
+				9475A77128B69C6E003F90CF /* GSPromising.h */,
+				9475A77028B69C6E003F90CF /* GSPromising.m */,
+			);
+			path = sources;
+			sourceTree = "<group>";
+		};
 		BC3E50531F5CDDC0002E40D6 = {
 			isa = PBXGroup;
 			children = (
+				9475A76E28B69C6E003F90CF /* GSPromise */,
 				BC3E505E1F5CDDC1002E40D6 /* TestGSPromise */,
 				BC3E505D1F5CDDC1002E40D6 /* Products */,
 			);
@@ -64,8 +85,6 @@
 		BC3E505E1F5CDDC1002E40D6 /* TestGSPromise */ = {
 			isa = PBXGroup;
 			children = (
-				BC3E50761F5CDDD5002E40D6 /* GSPromise.h */,
-				BC3E50771F5CDDD5002E40D6 /* GSPromise.m */,
 				BC3E50791F5CDDE8002E40D6 /* TestManager.h */,
 				BC3E507A1F5CDDE8002E40D6 /* TestManager.m */,
 				BC3E507B1F5CDDE8002E40D6 /* ViewController.h */,
@@ -115,8 +134,9 @@
 		BC3E50541F5CDDC1002E40D6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = Brook;
+				CLASSPREFIX = GS;
+				LastUpgradeCheck = 1340;
+				ORGANIZATIONNAME = beforeold;
 				TargetAttributes = {
 					BC3E505B1F5CDDC1002E40D6 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -126,7 +146,7 @@
 			};
 			buildConfigurationList = BC3E50571F5CDDC1002E40D6 /* Build configuration list for PBXProject "TestGSPromise" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -162,7 +182,7 @@
 			files = (
 				BC3E50641F5CDDC1002E40D6 /* AppDelegate.m in Sources */,
 				BC3E50611F5CDDC1002E40D6 /* main.m in Sources */,
-				BC3E50781F5CDDD5002E40D6 /* GSPromise.m in Sources */,
+				9475A77228B69C6E003F90CF /* GSPromising.m in Sources */,
 				BC3E507D1F5CDDE8002E40D6 /* TestManager.m in Sources */,
 				BC3E507E1F5CDDE8002E40D6 /* ViewController.m in Sources */,
 			);
@@ -199,15 +219,24 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -230,7 +259,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -247,15 +276,24 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -272,7 +310,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -285,7 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TestGSPromise/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.printer.TestGSPromise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -297,7 +335,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TestGSPromise/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.printer.TestGSPromise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -323,6 +361,7 @@
 				BC3E50751F5CDDC3002E40D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
